@@ -6,7 +6,7 @@ public class Client extends Server {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		try {
-			Socket s = new Socket("localhost", 8585);
+			Socket s = new Socket("localhost", 6000);
 			DataInputStream din = new DataInputStream(s.getInputStream());
 			DataOutputStream dout = new DataOutputStream(s.getOutputStream());
 			System.out.print("\nEnter a Number: ");

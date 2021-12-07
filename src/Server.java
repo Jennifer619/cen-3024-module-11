@@ -3,7 +3,7 @@ import java.net.*;
 
 public class Server {
 	public static String isPrime(int num) {
-		if(num < 2) {
+		if(num < 1) {
 			return "No";
 		}
 		int i = 2;
@@ -17,7 +17,7 @@ public class Server {
 	}
 	public static void main(String[] args) {
 		try {
-			ServerSocket ss = new ServerSocket(8585);
+			ServerSocket ss = new ServerSocket(6000);
 			Socket s = ss.accept();
 			DataInputStream din = new DataInputStream(s.getInputStream());
 			DataOutputStream dout = new DataOutputStream(s.getOutputStream());
