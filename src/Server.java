@@ -17,11 +17,11 @@ public class Server {
 	}
 	public static void main(String[] args) {
 		try {
-			ServerSocket ss = new ServerSocket(8080);
+			ServerSocket ss = new ServerSocket(8585);
 			Socket s = ss.accept();
-			DataInputStream dis = new DataInputStream(s.getInputStream());
+			DataInputStream din = new DataInputStream(s.getInputStream());
 			DataOutputStream dout = new DataOutputStream(s.getOutputStream());
-			int num = (int) dis.readInt();
+			int num = (int) din.readInt();
 			dout.writeUTF(isPrime(num));
 			dout.flush();
 			dout.close();
